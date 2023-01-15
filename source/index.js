@@ -1,0 +1,1 @@
+console.log("Se agrego correctamente el archivo index.js")
