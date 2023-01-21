@@ -1,0 +1,88 @@
+/**
+Mobile first css
+**/
+:root{
+    --dark-blue: #0A3871;
+    --min-width: 375px;
+    --min-content-width: 343px;
+    --default-padding: 10px;
+    --min-height: 50px;
+    --default-margin: 10px;
+}
+
+/* RESET */
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+
+/** My own source code **/
+
+/*** Elements styles ***/
+.input-section {
+    min-width: var(--min-content-width); 
+    background-color: blue;
+    flex-grow: 4; /*4 veces más tamaño que su compañeros*/
+
+    display: flex;
+    flex-direction: column;
+}
+.output-section {
+    min-width: var(--min-content-width); 
+    background-color: red;
+    flex-grow: 1;
+}
+
+.input-section__input {
+    flex-grow: 1;
+}
+
+.input-section__buttons {
+    margin-top: var(--default-margin);
+    flex-grow: 1;
+}
+
+/*** Layout ***/
+header {
+    display: flex;
+    background-color: salmon;
+    padding: var(--default-padding);
+    min-height: var(--min-height);
+}
+
+.container {
+    min-width: var(--min-width);
+    display: flex;
+    flex-direction: row; /* This configuration is by default, so you can remove this line */
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    padding: var(--default-padding);
+    margin-top: var(--default-margin);
+}
+
+/***  ***/
+
+#input_text {
+    background-color: transparent;
+    /*opacity: 0.5;*/
+    border: none;
+}
+
+textarea#input_text::placeholder {
+    color: var(--dark-blue);
+    font-style: italic;
+}
+
