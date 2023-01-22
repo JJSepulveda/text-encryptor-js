@@ -6,30 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encripatdor/desencripatdor</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/tablet.css">
+    <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
     <header>
         <img src="images/logo.png" alt="Logo" class="logo">
     </header>
-    <main>
-        <section>
-            <textarea name="" id="input_text" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-            <div>
-                <span>Solo letras minusculas y sin acentos</span>
+    <main class="container">
+        <section class="input-section col">
+            <div class="input-section__input">
+                <textarea 
+                    name="" 
+                    id="input_text" 
+                    cols="30" 
+                    rows="20" 
+                    placeholder="Ingresa el texto aquí"></textarea>
+                <span class="input-section__input__info">Solo letras minusculas y sin acentos</span>
             </div>
-            <div class="buttons">
-                <button id="btn_encode">
-                    Encriptar
-                </button>
-                <button id="btn_decode">
-                    Desencriptar
-                </button>
+            <div class="input-section__buttons">
+                <div class="btn-group">
+                    <button id="btn_encode" class="btn btn-primary">
+                        Encriptar
+                    </button>
+                    <button id="btn_decode" class="btn-secondary btn">
+                        Desencriptar
+                    </button>
+                </div>
             </div>
         </section>
-        <section>
-            <div id="result_section">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <span>Ingrese el texto que desees encriptar o desencriptar</span>
+        <section class="output-section col">
+            <div class="void_result_section">
+                <h2 class="void_result_section__h2">Ningún mensaje fue encontrado</h2>
+                <span class="void_result_section__span">Ingrese el texto que desees encriptar o desencriptar</span>
+            </div>
+            <div class="result_section">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi expedita quaerat reprehenderit perferendis perspiciatis repudiandae at dolore aliquid a tenetur adipisci recusandae eius ullam nihil molestias amet, assumenda tempora.
+                </p>
+                <button class="btn-secondary">Copiar</button>
             </div>
         </section>
         <footer>

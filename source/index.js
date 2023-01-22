@@ -2,7 +2,7 @@ console.log("Se agrego correctamente el archivo index.js")
 
 const input_text = document.getElementById('input_text');
 const btn_encode = document.getElementById('btn_encode');
-let result = document.getElementById('result_section');
+const result = document.getElementsByClassName('result_section')[0];
 
 const btn_decode = document.getElementById('btn_decode');
 

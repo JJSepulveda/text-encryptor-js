@@ -1,0 +1,186 @@
+/**
+Mobile first css
+**/
+:root{
+    --dark-blue: #0A3871;
+    --min-width: 375px;
+    --min-content-width: 343px;
+    --default-padding: 10px;
+    --min-height: 50px;
+    --default-margin: 10px;
+    --default-border-radius: 32px;
+
+    --size-btn-padding: 24px;
+
+    --clr-light-blue-100: #F3F5FC;
+    --clr-gray-400: #495057;
+    --clr-gray-500: #343A40;
+    --clr-text-color: #0A3871;
+    --clr-dark-blue-300: #0A3871;
+    --clr-white: #ffffff;
+
+    --default-font-size: 32px;
+    --small-font-size: 12px;
+    --medium-font-size: 16px;
+    --h2-font-size: 24px;
+
+    --font-family: "inter";
+}
+
+/* RESET */
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    background-color: var(--clr-light-blue-100);
+    color: var(--clr-text-color);
+    font-family: var(--font-family);
+}
+
+/** My own source code **/
+
+/*** Elements styles (Layout) ***/
+.input-section {
+    min-width: var(--min-content-width); 
+    flex-grow: 4; /*4 veces más tamaño que su compañeros*/
+
+    display: flex;
+    flex-direction: column;
+}
+.output-section {
+    min-width: var(--min-content-width); 
+    flex-grow: 1;
+
+    background-color: var(--clr-white);
+    display: flex;
+    place-content: center;
+    flex-direction: column;
+    padding: var(--default-padding);
+    margin-left: var(--default-margin);
+    margin-right: var(--default-margin);
+    border-radius: var(--default-border-radius);
+    text-align: center;
+}
+
+.input-section__input {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section__buttons {
+    margin-top: var(--default-margin);
+    flex-grow: 1;
+}
+
+/*** Layout ***/
+header {
+    display: flex;
+    padding: var(--default-padding);
+    min-height: var(--min-height);
+}
+
+.container {
+    min-width: var(--min-width);
+    margin-top: var(--default-margin);
+    display: flex;
+    flex-direction: row; /* This configuration is by default, so you can remove this line */
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    padding: var(--default-padding);
+    margin-top: var(--default-margin);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+/*** Elements inside styles ***/
+.result_section {
+    display: none;
+}
+
+#input_text {
+    background-color: transparent;
+    /*opacity: 0.5;*/
+    border: none;
+}
+
+textarea#input_text::placeholder {
+    color: var(--dark-blue);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--default-font-size);
+    padding: var(--default-padding);
+}
+
+.input-section__input__info {
+    color: var(--clr-gray-400);
+    font-weight: 400;
+    font-size: var(--small-font-size);
+    padding: var(--default-padding);
+}
+
+.input-section__input__info::before {
+    content: 'ℹ️ ';
+}
+
+.btn-primary {
+    background-color: var(--clr-dark-blue-300);
+    color: var(--clr-white);
+}
+
+.btn-secondary {
+    color: var(--clr-dark-blue-300);
+    border: 1px solid var(--clr-dark-blue-300) !important;
+    background-color: transparent;
+}
+
+.btn {
+    margin-top: var(--default-margin);
+    padding: var(--size-btn-padding);
+    border: 0;
+    border-radius: var(--size-btn-padding);
+    width: 100%;
+    font-size: var(--medium-font-size);
+    box-sizing: border-box;   
+}
+
+.void_result_section {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    gap: var(--default-margin);
+    max-width: 263px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: var(--h2-font-size);
+    color: var(--clr-gray-500);
+}
+
+.void_result_section__h2 {
+    margin-top: var(--default-margin);
+}
+
+.void_result_section__span {
+    margin-top: var(--default-margin);
+    color: var(--clr-gray-400);
+    font-size: var(--medium-font-size);
+    margin-bottom: var(--default-margin);
+}
