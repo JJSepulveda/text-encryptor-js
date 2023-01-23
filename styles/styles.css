@@ -126,6 +126,15 @@ textarea#input_text::placeholder {
     padding: var(--default-padding);
 }
 
+textarea{
+    resize: none;
+    color: var(--dark-blue);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--default-font-size);
+    padding: var(--default-padding);
+}
+
 .input-section__input__info {
     color: var(--clr-gray-400);
     font-weight: 400;
@@ -222,10 +231,16 @@ h2 {
 @media only screen and (min-width: 1024px){
     .container {
         flex-direction: row; /* This configuration is by default, so you can remove this line */
-        align-items: start;
+        align-items: stretch;
+        height: 90vh;
     }
     .input-section {
         flex-grow: 4;
+        justify-content: space-between;
     }
+    .input-section__buttons {
+        flex-grow: unset;
+    }
+
 }
 
