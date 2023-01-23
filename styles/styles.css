@@ -53,10 +53,10 @@ body{
     display: flex;
     flex-direction: column;
 }
-.output-section {
-    min-width: var(--min-content-width); 
-    flex-grow: 1;
 
+.output-section {
+    min-width: var(--min-content-width);
+    flex-grow: 1;
     background-color: var(--clr-white);
     display: flex;
     place-content: center;
@@ -173,7 +173,19 @@ textarea{
     flex-flow: column;
     gap: var(--default-margin);
     max-width: 263px;
+    width: 100%;
     margin: 0 auto;
+}
+
+.result_section {
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    gap: var(--default-margin);
+    margin: 0 auto;   
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 
 h2 {
@@ -191,17 +203,6 @@ h2 {
     color: var(--clr-gray-400);
     font-size: var(--medium-font-size);
     margin-bottom: var(--default-margin);
-}
-
-.result_section {
-    text-align: left;
-    display: flex;
-    flex-flow: column;
-    gap: var(--default-margin);
-    min-width: 80%;
-    margin: 0 auto;   
-    justify-content: space-between;
-    height: 100%;
 }
 
 .result_section__p{
