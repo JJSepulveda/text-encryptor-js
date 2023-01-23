@@ -4,11 +4,13 @@ const input_text = document.getElementById('input_text');
 const btn_encode = document.getElementById('btn_encode');
 const result = document.getElementsByClassName('result_section')[0];
 const result_p = document.getElementsByClassName('result_section__p')[0];
+const btn_copy = document.getElementById("copy");
 
 const btn_decode = document.getElementById('btn_decode');
 
 btn_encode.addEventListener("click", encript_textarea);
 btn_decode.addEventListener("click", decript_textarea);
+btn_copy.addEventListener("click", () => {copyToClipboard("result_section__p")})
 
 /**
  * Sustitulle las vocales por una secuencia de caracteres preestablecida
